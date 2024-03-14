@@ -3,28 +3,29 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../cartWidget/CartWidget';
-
+import { NavLink } from 'react-router-dom';
 function NavBar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Puchi-App</Navbar.Brand>
+        <Navbar.Brand as={NavLink} to='/'>Puchi-App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#link">Decoracion</Nav.Link>
-            <Nav.Link href="#link">Textil</Nav.Link>
-            <Nav.Link href="#link">Amigurumis</Nav.Link>
+            <Nav.Link as={NavLink} to='/'>Inicio</Nav.Link>
+            <Nav.Link as={NavLink} to='/category/decoracion'>Decoracion</Nav.Link>
+            <Nav.Link as={NavLink} to='/category/textiles'>Textil</Nav.Link>
+            <Nav.Link as={NavLink} to='/category/amigurumis'>Amigurumis</Nav.Link>
             <NavDropdown title="Productos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Nuevos</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Mas vendidos</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Ofertas</NavDropdown.Item>
-            
+              <NavDropdown.Item as={NavLink} to='/category/nuevos'>Nuevos</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/category/mas vendidos'>Mas vendidos</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/category/ofertas'>Ofertas</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#link">Contacto</Nav.Link>
           </Nav>
-          <CartWidget/>
+          <NavLink to='/cart' className="text-decoration-none">
+            <CartWidget counter={15}></CartWidget>
+          </NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>
