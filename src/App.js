@@ -5,8 +5,10 @@ import ItemListContainer from './components/itemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cart from './components/cart/Cart';
+import { CartProvider } from './context/CartContext';
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter> 
          <NavBar></NavBar>
          <Routes>
@@ -17,6 +19,7 @@ function App() {
           <Route path='*' element={<h2>404: No existe</h2>}></Route>
          </Routes>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 
