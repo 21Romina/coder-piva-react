@@ -70,9 +70,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ### Librerias Usadas
-Bootstrap: utilizada para el styling de la app.
-Firebase: utilizada como base de datos del proyecto.
-React Router Dom: libreria de navegación por rutas.
+Bootstrap: utilizada para el styling de la app. (https://getbootstrap.com/)
+Firebase: utilizada como base de datos del proyecto. (https://firebase.google.com/?hl=es)
+React Router Dom: libreria de navegación por rutas. (https://www.npmjs.com/package/react-router-dom)
 
 ### Link de Video del funcionamiento de la app
 https://drive.google.com/file/d/1nQHpgeAOOUSpi16GMV_LBoBGddoPW9VH/view?usp=drive_link
