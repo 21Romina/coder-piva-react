@@ -21,7 +21,6 @@ function NavBar() {
               <NavDropdown.Item as={NavLink} to='/category/mas vendidos'>Mas vendidos</NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to='/category/ofertas'>Ofertas</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">Contacto</Nav.Link>
           </Nav>
           <NavLink to='/cart' className="text-decoration-none">
             <CartWidget counter={15}></CartWidget>
